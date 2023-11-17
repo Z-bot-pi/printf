@@ -14,7 +14,7 @@
 int w_handle_char(char c, char buffer[],
 int flags, int width, int bits, int size)
 { /* char is stored at left and paddind at buffer's right */
-int i = 0;
+int in = 0;
 char pa = ' ';
 UNUSED(bits);
 UNUSED(size);
@@ -26,7 +26,7 @@ buffer[i] = '\0';
 if (width > 1)
 {
 buffer[BUFF_SIZE - 1] = '\0';
-for (i = 0; i < width - 1; i++)
+for (in = 0; i < width - 1; i++)
 buffer[BUFF_SIZE - i - 2] = pa;
 if (flags & F_MINUS)
 return (write(1, &buffer[0], 1) +
@@ -79,7 +79,7 @@ if ((flags & F_ZERO) && !(flags & F_MINUS))
 pa = '0';
 if (width > length)
 {
-for (i = 0; i < width - length; i++)
+for (in = 0; i < width - length; i++)
 buffer[i] = pa;
 buffer[i] = '\0';
 if (flags & F_MINUS) /* Asign extra char to left of buffer
