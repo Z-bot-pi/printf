@@ -10,7 +10,7 @@
 * @size: Size specifier
 * Return: Numbers of chars printed
 */
-int p_rotation13_string(va_list dataTypes, char buff[],
+int p_rotation13_string(va_list types, char buffer[],
 int flags, int width, int bits, int size)
 {
 char x;
@@ -20,7 +20,7 @@ int count = 0;
 char in[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 char out[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 str = va_arg(types, char *);
-UNUSED(buff);
+UNUSED(buffer);
 UNUSED(flags);
 UNUSED(width);
 UNUSED(bits);
@@ -48,4 +48,3 @@ count++;
 }
 return (count);
 }
-

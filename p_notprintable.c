@@ -11,11 +11,11 @@
 * @size: Size specifier
 * Return: Number of chars printed
 */
-int not_printable(va_list dataTypes, char buff[],
+int not_printable(va_list types, char buffer[],
 int flags, int width, int bits, int size)
 {
 int i = 0, offset = 0;
-char *str = va_arg(dataTypes, char *);
+char *str = va_arg(types, char *);
 UNUSED(flags);
 UNUSED(width);
 UNUSED(bits);
@@ -25,12 +25,11 @@ return (write(1, "(null)", 6));
 while (str[i] != '\0')
 {
 if (its_printable(str[i]))
-buff[i + offset] = str[i];
+buffer[i + offset] = str[i];
 else
-offset += app_hexa_code(str[i], buff, i + offset);
+offset += app_hexa_code(str[i], buffer, i + offset);
 i++;
 }
-buff[i + offset] = '\0';
+buffer[i + offset] = '\0';
 return (write(1, buff, i + offset));
 }
-

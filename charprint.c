@@ -10,10 +10,10 @@
 * @size: Size specifier
 * Return: Number of chars printed
 */
-int print_char(va_list dataTypes, char buff[],
+int print_char(va_list types, char buffer[],
 int flags, int width, int bits, int size)
 {
-char c = va_arg(dataTypes, int);
-return (w_pointer(c, buff, flags, width, bits,
+char c = va_arg(types, int);
+return (w_pointer(c, buffer, flags, width, bits,
 size));
 }

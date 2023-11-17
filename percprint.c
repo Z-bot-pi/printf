@@ -10,11 +10,11 @@
 * @size: Size specifier
 * Return: Number of chars printed
 */
-int p_percent(va_list types, char buff[],
+int p_percent(va_list types, char buffer[],
 int flags, int width, int bits, int size)
 {
-UNUSED(dataTypes);
-UNUSED(buff);
+UNUSED(types);
+UNUSED(buffer);
 UNUSED(flags);
 UNUSED(width);
 UNUSED(bits);

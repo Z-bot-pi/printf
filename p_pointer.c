@@ -10,8 +10,8 @@
 * @size: Size specifier
 * Return: Number of chars printed.
 */
-int p_pointer(va_list dataTypes, char buff[],
-int flags, int width, int precision, int size)
+int p_pointer(va_list types, char buffer[],
+int flags, int width, int bits, int size)
 {
 char x_c = 0, pa = ' ';
 int in = BUFF_SIZE - 2, length = 2, pa_start = 1; /* length=2,
@@ -23,19 +23,19 @@ UNUSED(width);
 UNUSED(size);
 if (addrs == NULL)
 return (write(1, "(nil)", 5));
-buff[BUFF_SIZE - 1] = '\0';
+buffer[BUFF_SIZE - 1] = '\0';
 UNUSED(bits);
 num_addrs = (unsigned long)addrs;
 while (num_addrs > 0)
 {
-buff[in--] = map_to[num_addrs % 16];
+buffer[in--] = map_to[num_addrs % 16];
 num_addrs /= 16;
 length++;
 }
 if ((flags & F_ZERO) && !(flags & F_MINUS))
 pa = '0';
 if (flags & F_PLUS)
-extra_c = '+', length++;
+x_c = '+', length++;
 else if (flags & F_SPACE)
 x_c = ' ', length++;
 in++;
