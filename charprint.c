@@ -14,6 +14,6 @@ int print_char(va_list dataTypes, char buff[],
 int flags, int width, int bits, int size)
 {
 char c = va_arg(dataTypes, int);
-return (w_handle_char(c, buff, flags, width, bits,
+return (w_pointer(c, buff, flags, width, bits,
 size));
 }
