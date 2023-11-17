@@ -27,11 +27,11 @@ char map_to[] = "0123456789ABCDEF";
 /* The hexa format code is always 2 digits long */
 if (ascii_code < 0)
 ascii_code *= -1;
-buff[i++] = '\\';
+buffer[i++] = '\\';
 
-buff[i++] = 'x';
-buff[i++] = map_to[ascii_code / 16];
-buff[i] = map_to[ascii_code % 16];
+buffer[i++] = 'x';
+buffer[i++] = map_to[ascii_code / 16];
+buffer[i] = map_to[ascii_code % 16];
 return (3);
 }
 /**

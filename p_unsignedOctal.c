@@ -9,7 +9,7 @@
 * @size: Size specifier
 * Return: Number of chars printed
 */
-int p_octal(va_list dataTypes, char buff[],
+int p_octal(va_list types, char buffer[],
 int flags, int width, int bits, int size)
 {
 int i = BUFF_SIZE - 2;
@@ -18,10 +18,10 @@ unsigned long int init_num = num;
 UNUSED(width);
 num = convrt_s_unsgnd(num, size);
 if (num == 0)
-buff[i--] = '0';
-buff[BUFF_SIZE - 1] = '\0';
+buffer[i--] = '0';
+buffer[BUFF_SIZE - 1] = '\0';
 while (num > 0)
 {
-buff[i--] = (num % 8) + '0';
+buffer[i--] = (num % 8) + '0';
 }
 }

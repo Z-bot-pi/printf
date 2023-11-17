@@ -12,9 +12,9 @@ notation
 * @size: Size specifier
 * Return: Number of chars printed
 */
-int p_hexa_upper(va_list dataTypes, char buff[],
+int p_hexa_upper(va_list types, char buffer[],
 int flags, int width, int bits, int size)
 {
-return (p_hexa(dataTypes, "0123456789ABCDEF", buff,
+return (p_hexa(types, "0123456789ABCDEF", buffer,
 flags, 'X', width, bits, size));
 }

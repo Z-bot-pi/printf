@@ -10,12 +10,12 @@
 * @size: Size specifier
 * Return: Number of chars printed
 */
-int p_string(va_list dataTypes, char buff[],
+int p_string(va_list types, char buffer[],
 int flags, int width, int bits, int size)
 {
 int length = 0, i;
 char *str = va_arg(types, char *);
-UNUSED(buff);
+UNUSED(buffer);
 UNUSED(flags);
 UNUSED(width);
 UNUSED(bits);
