@@ -17,7 +17,7 @@ int i = BUFF_SIZE - 2;
 int its_negative = 0;
 long int n = va_arg(dataTypes, long int);
 unsigned long int num;
-n = cnvrt_s_number(n, size);
+n = convrt_s_number(n, size);
 if (n == 0)
 buff[i--] = '0';
 buff[BUFF_SIZE - 1] = '\0';

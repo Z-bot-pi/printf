@@ -26,7 +26,7 @@ p_not_printable},
 };
 for (i = 0; fmt_types[i].fmt != '\0'; i++)
 if (fmt[*in] == fmt_types[i].fmt)
-return (fmt_types[i].fn(list, buff, flags, width,
+return (fmt_types[i].fxn(list, buff, flags, width,
 bits, size));
 if (fmt_types[i].fmt == '\0')
 {

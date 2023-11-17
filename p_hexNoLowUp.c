@@ -20,7 +20,7 @@ int i = BUFF_SIZE - 2;
 unsigned long int num = va_arg(types, unsigned long int);
 unsigned long int init_num = num;
 UNUSED(width);
-num = convert_size_unsgnd(num, size);
+num = convrt_s_unsgnd(num, size);
 if (num == 0)
 buff[i--] = '0';
 buff[BUFF_SIZE - 1] = '\0';
@@ -35,7 +35,7 @@ buff[i--] = flag_ch;
 buff[i--] = '0';
 }
 i++;
-return (write_unsgnd(0, i, buff, flags, width, bits, size));
+return (w_unsgnd(0, i, buff, flags, width, bits, size));
 }
 
 num /= 8;
@@ -43,5 +43,5 @@ num /= 8;
 if (flags & F_HASH && init_num != 0)
 buff[i--] = '0';
 i++;
-return (write_unsgnd(0, i, buff, flags, width, bits, size));
+return (w_unsgnd(0, i, buff, flags, width, bits, size));
 }

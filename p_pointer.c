@@ -28,7 +28,7 @@ UNUSED(bits);
 num_addrs = (unsigned long)addrs;
 while (num_addrs > 0)
 {
-buff[ind--] = map_to[num_addrs % 16];
+buff[in--] = map_to[num_addrs % 16];
 num_addrs /= 16;
 length++;
 }
@@ -38,8 +38,8 @@ if (flags & F_PLUS)
 extra_c = '+', length++;
 else if (flags & F_SPACE)
 x_c = ' ', length++;
-ind++;
+in++;
 /*return (write(1, &buff[i], BUFF_SIZE - i - 1));*/
-return (write_pointer(buff, in, length,
+return (w_pointer(buff, in, length,
 width, flags, pa, x_c, pa_start));
 }
