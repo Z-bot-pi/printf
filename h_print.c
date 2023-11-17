@@ -20,7 +20,7 @@ fmt_t fmt_types[] = {
 {'i', p_int}, {'d', p_int}, {'b', p_binary},
 {'u', p_unsigned}, {'o', p_octal}, {'x',
 p_hexadecimal},
-{'X', p_upper_hexa}, {'p', p_pointer}, {'S',
+{'X', p_upper_hexa}, {'p', w_pointer}, {'S',
 p_not_printable},
 {'r', p_reverse}, {'R', p_rotation13_string}, {'\0', NULL}
 };
