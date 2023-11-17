@@ -1,9 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 #include <stdarg.h>
-#include <limits.h>
 #include <stdio.h>
-#include <stdlib.h>
 #include <unistd.h>
 
 #define UNUSED(x) (void)(x)
@@ -22,24 +20,24 @@
 
 
 /**
-* struct fmt - Stru op
+* struct frmt - Stru op
 * @frmt: format.
 * @fxn: The function associated.
 */
-struct fmt
+struct frmt
 {
-char fmt;
+char frmt;
 int (*fxn)(va_list, char[], int, int, int, int);
 };
 
 /**
-* typedef struct fmt fmt_t - Struct op
+* typedef struct frmt frmt_t - Struct op
 * @frmt: The format.
 * @fm_t: The function associated.
 */
 typedef struct fmt fmt_t;
 int _printf(const char *format, ...);
-int h_print(const char *fmt, int *i,
+int h_print(const char *frmt, int *i,
 va_list list, char buff[], int flags, int width, int bits, int
 size);
 
@@ -47,23 +45,23 @@ size);
 
 /** chars and strings **/
 int p_char(va_list dataTypes, char buff[],
-		int flags, int width, int bits, int size);
+                int flags, int width, int bits, int size);
 int p_string(va_list dataTypes, char buff[],
-		int flags, int width, int bits, int size);
+                int flags, int width, int bits, int size);
 int p_percent(va_list dataTypes, char buff[],
-		int flags, int width, int bits, int size);
+                int flags, int width, int bits, int size);
 
 /** numbers **/
 int p_int(va_list dataTypes, char buff[],
-		int flags, int width, int bit, int size);
+                int flags, int width, int bit, int size);
 int p_binary(va_list dataTypes, char buff[],
-		int flags, int width, int bits, int size);
+                int flags, int width, int bits, int size);
 int p_unsigned(va_list dataTypes, char buff[],
-		int flags, int width, int bits, int size);
+                int flags, int width, int bits, int size);
 int p_octal(va_list dataTypes, char buff[],
-		int flags, int width, int bits, int size);
+                int flags, int width, int bits, int size);
 int p_hexadecimal(va_list dataTypes, char buff[],
-		int flags, int width, int bits, int size);
+                int flags, int width, int bits, int size);
 int p_hexa(va_list dataTypes, char map_t[], char buff[],
                 int flags, char cha_flag, int width, int bits, int size);
 int p_upper_hexa(va_list dataTypes, char buff[],
@@ -77,32 +75,32 @@ int fetch_size(const char *format, int *i);
 
 /** memory address fxn **/
 int p_memory_variable(va_list dataTypes, char buff[],
-		int flags, int width, int bits, int size);
+                int flags, int width, int bits, int size);
 
 /** reversed string */
 int p_reversed_string(va_list dataTypes, char buff[],
-		int flags, int width, int bits, int size);
+                int flags, int width, int bits, int size);
 
 /** Not printable characters */
 int p_not_printable(va_list dataTypes, char buff[],
-		int flags, int width, int bits, int size);
+                int flags, int width, int bits, int size);
 
 /** rotation13_string **/
 int p_rotation13_string(va_list dataTypes, char buff[],
-		int flags, int width, int bits, int size);
+                int flags, int width, int bits, int size);
 
 /** Width **/
 int w_number(int positive, int in, char buff[],
        int flags, int width, int bits, int size);
 
 int w_num(int in, char bf[], int flags, int width, int bits,
-		int length, char pa, char x_c);
+                int length, char pa, char x_c);
 
-int w_pointer(char c, char buff[],
-		int flags, int width, int bits, int size);
+int w_handle_char(char c, char buff[],
+                int flags, int width, int bits, int size);
 
 int w_unassigned(int negative, int in,char buff[],
-		int flags, int width, int bits, int size);
+                int flags, int width, int bits, int size);
 
 
 /** Uti **/
@@ -112,4 +110,3 @@ int is_digit(char);
 long int convrt_s_number(long int num, int size);
 long int convrt_s_unsgnd(unsigned long int num, int size);
 #endif /* MAIN_H */
-

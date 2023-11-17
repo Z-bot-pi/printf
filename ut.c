@@ -27,7 +27,7 @@ char map_to[] = "0123456789ABCDEF";
 /* The hexa format code is always 2 digits long */
 if (ascii_code < 0)
 ascii_code *= -1;
-buffer[i++] = '\\';
+buff[i++] = '\\';
 
 buff[i++] = 'x';
 buff[i++] = map_to[ascii_code / 16];
@@ -53,7 +53,7 @@ return (0);
 *
 * Return: Casted value of num
 */
-long int convert_size_number(long int num, int size)
+long int convrt_s_number(long int num, int size)
 {
 if (size == S_LONG)
 return (num);
@@ -68,7 +68,7 @@ return ((int)num);
 *
 * Return: Casted value of num
 */
-long int convert_size_unsgnd(unsigned long int num, int size)
+long int convrt_s_unsgnd(unsigned long int num, int size)
 {
 if (size == S_LONG)
 return (num);
