@@ -17,7 +17,7 @@ int i = BUFF_SIZE - 2;
 int its_negative = 0;
 long int n = va_arg(dataTypes, long int);
 unsigned long int num;
-n = convert_size_number(n, size);
+n = cnvrt_s_number(n, size);
 if (n == 0)
 buff[i--] = '0';
 buff[BUFF_SIZE - 1] = '\0';
@@ -33,7 +33,7 @@ buff[i--] = (num % 10) + '0';
 num /= 10;
 }
 i++;
-return (write_number(its_negative, i, buff, flags, width,
+return (w_number(its_negative, i, buff, flags, width,
 bits, size));
 }
 

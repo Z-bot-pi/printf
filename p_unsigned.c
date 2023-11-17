@@ -14,7 +14,7 @@ int flags, int width, int bits, int size)
 {
 int i = BUFF_SIZE - 2;
 unsigned long int num = va_arg(types, unsigned long int);
-num = convert_size_unsgnd(num, size);
+num = cnvrt_s_unsgnd(num, size);
 if (num == 0)
 buff[i--] = '0';
 buff[BUFF_SIZE - 1] = '\0';
@@ -24,5 +24,5 @@ buff[i--] = (num % 10) + '0';
 num /= 10;
 }
 i++;
-return (write_unsgnd(0, i, buff, flags, width, bits, size));
+return (w_unsgnd(0, i, buff, flags, width, bits, size));
 }
