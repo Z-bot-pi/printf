@@ -98,7 +98,7 @@ int w_number(int positive, int in, char buff[],
 int w_num(int in, char bf[], int flags, int width, int bits,
 		int length, char pa, char x_c);
 
-int w_handle_char(char c, char buff[],
+int w_pointer(char c, char buff[],
 		int flags, int width, int bits, int size);
 
 int w_unassigned(int negative, int in,char buff[],
