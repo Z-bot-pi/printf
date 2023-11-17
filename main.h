@@ -108,7 +108,7 @@ int w_unassigned(int negative, int in,char buff[],
 /** Uti **/
 int  printable(char);
 int app_hexa_code(char, char[], int);
-int is_ digit(char);
+int is_digit(char);
 long int convrt_s_number(long int num, int size);
 long int convrt_s_unsgnd(unsigned long int num, int size);
 #endif /* MAIN_H */
