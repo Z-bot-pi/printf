@@ -22,24 +22,24 @@
 
 
 /**
-* struct frmt - Stru op
+* struct fmt - Stru op
 * @frmt: format.
 * @fxn: The function associated.
 */
-struct frmt
+struct fmt
 {
-char frmt;
+char fmt;
 int (*fxn)(va_list, char[], int, int, int, int);
 };
 
 /**
-* typedef struct frmt frmt_t - Struct op
+* typedef struct fmt fmt_t - Struct op
 * @frmt: The format.
 * @fm_t: The function associated.
 */
-typedef struct fmt frmt_t;
+typedef struct fmt fmt_t;
 int _printf(const char *format, ...);
-int h_print(const char *frmt, int *i,
+int h_print(const char *fmt, int *i,
 va_list list, char buff[], int flags, int width, int bits, int
 size);
 

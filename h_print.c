@@ -11,7 +11,7 @@
 * @size: Size specifier
 * Return: 1 or 2;
 */
-int h_print(const char *fmt, int *ind, va_list list, char buff[],
+int h_print(const char *fmt, int *in, va_list list, char buff[],
 int flags, int width, int bits, int size)
 {
 int i, unknow_len = 0, p_chars = -1;
