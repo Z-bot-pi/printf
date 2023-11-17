@@ -14,7 +14,7 @@ int flags, int width, int bits, int size)
 {
 int i = BUFF_SIZE - 2;
 unsigned long int num = va_arg(types, unsigned long int);
-num = cnvrt_s_unsgnd(num, size);
+num = convrt_s_unsgnd(num, size);
 if (num == 0)
 buff[i--] = '0';
 buff[BUFF_SIZE - 1] = '\0';

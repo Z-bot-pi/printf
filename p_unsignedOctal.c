@@ -16,7 +16,7 @@ int i = BUFF_SIZE - 2;
 unsigned long int num = va_arg(types, unsigned long int);
 unsigned long int init_num = num;
 UNUSED(width);
-num = convert_size_unsgnd(num, size);
+num = convrt_s_unsgnd(num, size);
 if (num == 0)
 buff[i--] = '0';
 buff[BUFF_SIZE - 1] = '\0';

@@ -54,7 +54,7 @@ return (write(1, &buff[0], 1));
 int w_number(int its_negative, int in, char buff[],
 int flags, int width, int bits, int size)
 {
-int length = BUFF_SIZE - ind - 1;
+int length = BUFF_SIZE - in - 1;
 char pa = ' ', x_ch = 0;
 UNUSED(size);
 if ((flags & F_ZERO) && !(flags & F_MINUS))
