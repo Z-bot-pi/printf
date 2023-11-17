@@ -39,7 +39,7 @@ int (*fxn)(va_list, char[], int, int, int, int);
 */
 typedef struct fmt frmt_t;
 int _printf(const char *format, ...);
-int handle_print(const char *frmt, int *i,
+int h_print(const char *frmt, int *i,
 va_list list, char buff[], int flags, int width, int bits, int
 size);
 
@@ -106,7 +106,7 @@ int w_unassigned(int negative, int in,char buff[],
 
 
 /** Uti **/
-int printable(char);
+int its printable(char);
 int app_hexa_code(char, char[], int);
 int digit(char);
 long int convrt_s_number(long int num, int size);
